@@ -1,0 +1,81 @@
+html, body {
+  height: 100vh;
+  width: 90%;
+  margin-left: 5vw;
+  margin-right: 5vw; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 400px;
+  margin: 50% 0; }
+  .grid h2 {
+    color: #f2f2f2;
+    font-weight: 700;
+    font-family: "Big Shoulder Display"; }
+  .grid p {
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 400;
+    font-family: "Lexend Deca";
+    font-size: 15px; }
+
+.card {
+  padding: 20px 40px;
+  text-align: left; }
+  .card button {
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    border-radius: 18px;
+    font-size: 15px;
+    text-align: center;
+    border-color: #f2f2f2; }
+
+.sedan {
+  grid-column: 1/2;
+  background-color: #e38826;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px; }
+  .sedan button {
+    color: #e38826; }
+
+.suv {
+  grid-column: 2/3;
+  background-color: #006970; }
+  .suv button {
+    color: #006970; }
+
+.luxury {
+  grid-column: 3/4;
+  background-color: #004241;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+  .luxury button {
+    color: #004241; }
+
+.attribute {
+  font-size: 2px;
+  text-align: center; }
+
+@media only screen and (max-width: 720px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 325px); }
+
+  .sedan {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0; }
+
+  .suv {
+    grid-column: 2/3;
+    grid-row: 2/3; }
+
+  .luxury {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0; } }
