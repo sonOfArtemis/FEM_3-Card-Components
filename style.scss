@@ -1,0 +1,97 @@
+// Scss Document
+$orange: hsl(31, 77%, 52%);
+$cyan: hsl(184, 100%, 22%);
+$darkCyan: hsl(179, 100%, 13%);
+$text: hsla(0, 0%, 100%, 0.75);
+$header: hsl(0, 0%, 95%);
+html, body {
+    height: 100vh;
+    width: 90%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 400px;
+    margin: 50% 0;  
+    h2 {
+        color: $header;
+        font-weight: 700;
+        font-family: "Big Shoulder Display";
+    }
+    p {
+        color: $text;
+        font-weight: 400;
+        font-family: "Lexend Deca";
+        font-size: 15px;
+    }
+}
+
+.card {
+    padding: 20px 40px;
+    text-align: left;
+    button {
+        background-color: $header;
+        padding: 10px 20px;
+        border-radius: 18px;
+        font-size: 15px;
+        text-align: center;
+        border-color: $header;
+    }
+
+}
+.sedan {
+    grid-column: 1/2;  
+    background-color: $orange;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    button {
+        color: $orange;
+    }
+}
+.suv {
+    grid-column: 2/3;   
+    background-color: $cyan;
+    button {
+        color: $cyan;
+    }
+}
+.luxury {
+    grid-column: 3/4;
+    background-color: $darkCyan;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    button {
+        color: $darkCyan;
+    }
+}
+.attribute {
+    font-size: 2px;
+    text-align: center;
+}
+@media only screen and (max-width:720px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 325px);
+    }
+    .sedan { 
+        grid-column: 2/3; 
+        grid-row: 1/2; 
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .suv { 
+        grid-column: 2/3;
+        grid-row: 2/3; 
+    }
+    .luxury { 
+        grid-column: 2/3;
+        grid-row: 3/4; 
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0;
+    }
+}
